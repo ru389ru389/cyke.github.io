@@ -1,384 +1,259 @@
-% SixtySecondsCV LaTeX template
-% Copyright © 2020 L. Gueroult <lgueroult-at-hotmail.com>
-% Licensed under the 3-Clause BSD License. See LICENSE file for details.
-%
-% Please visit https://github.com/LaGuer/SixtySecondsCV for the most
-% recent version! For bugs or feature requests, please open a new issue on
-% github.
-%
-% Contributors
-% ------------
-% * ifokkema
-% * Bertbk
-% * Hespe
-% * esben
-%
-% Attributions
-% ------------
-% * sixtysecondscv is based on the fortysecondcv class by Rene Wirnata
-%   (rene.wirnata@pandascience.net), released under the 3-Clause BSD license and available at
-%   https://github.com/PandaScience/FortySecondsCV/
-% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
-%   (cspagnuolo@unisa.it), released under the MIT license and available at
-%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
-% * further attributions are indicated immediately before corresponding code
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chieh-Ying Ke｜氣象研究員</title>
+  <meta name="description" content="Chieh-Ying Ke — 氣象研究員，專長為氣象雷達與數值天氣預報模式。">
+  <meta property="og:title" content="Chieh-Ying Ke｜氣象研究員">
+  <meta property="og:description" content="氣象雷達 · 數值模式 · 資料同化 · 臨近預報">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231f5f8b' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%231f5f8b' stroke-width='2'/%3E%3Cpath d='M16 16 L27 9' stroke='%231f5f8b' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
 
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">Chieh-Ying Ke</a>
+    <nav>
+      <a href="#about">關於</a>
+      <a href="#research">研究</a>
+      <a href="#experience">經歷</a>
+      <a href="#publications">著作</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+  </div>
+</header>
 
-%-------------------------------------------------------------------------------
-%                             ADDITIONAL PACKAGES
-%-------------------------------------------------------------------------------
-\documentclass[
-	a4paper,
-	% showframes,
-	% vline=2.2em,
-	%maincolor=cvgreen,
-	sidecolor=gray!50,
-	sectioncolor=materialblue,
-	subsectioncolor=materialindigo,
-	% itemtextcolor=black!80,
-	% sidebarwidth=0.4\paperwidth,
-	% topbottommargin=0.03\paperheight,
-	% leftrightmargin=20pt,
-	profilepicsize=3.5cm,
-	% profilepicborderwidth=3.5pt,
-	profilepicstyle=profilecircle,
-	profilepiczoom=1.0,
-	% profilepicxshift=0mm,
-	% profilepicyshift=0mm,
-	% profilepicrounding=1.0cm,
-	% logowidth=4.5cm,
-	% logospace=5mm,
-	% logoposition=before,
-]{sixtysecondscv}
+<main id="top">
 
-%-------------------------------------------------------------------------------
-%                             ADDITIONAL PACKAGES
-%-------------------------------------------------------------------------------
-% improve word spacing and hyphenation
-\usepackage{microtype}
-\usepackage{ragged2e}
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Atmospheric Scientist · 氣象研究員</p>
+        <!-- TODO: 填入中文姓名 -->
+        <h1>Chieh-Ying Ke <span class="todo">［中文姓名］</span></h1>
+        <p class="lead">
+          專注於<strong>氣象雷達</strong>觀測與<strong>數值天氣預報模式</strong>，
+          以雷達資料同化與高解析度模擬，提升劇烈天氣與短時強降雨的監測與預報能力。
+        </p>
+        <ul class="tags">
+          <li>Weather Radar</li>
+          <li>Numerical Weather Prediction</li>
+          <li>Data Assimilation</li>
+          <li>Nowcasting / QPF</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="#contact">聯絡我</a>
+          <!-- TODO: 將 CV 存成 cv.pdf 放在根目錄 -->
+          <a class="btn" href="cv.pdf">下載 CV</a>
+        </div>
+      </div>
 
-% uncomment in case you don't want any hyphenation
-% \usepackage[none]{hyphenat}
+      <!-- Radar PPI motif -->
+      <svg class="radar" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <radialGradient id="sweepGrad" cx="0" cy="0" r="1">
+            <stop offset="0" stop-color="currentColor" stop-opacity=".35"/>
+            <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-opacity=".25">
+          <circle cx="100" cy="100" r="92"/>
+          <circle cx="100" cy="100" r="69"/>
+          <circle cx="100" cy="100" r="46"/>
+          <circle cx="100" cy="100" r="23"/>
+          <line x1="8" y1="100" x2="192" y2="100"/>
+          <line x1="100" y1="8" x2="100" y2="192"/>
+        </g>
+        <g class="echo">
+          <ellipse cx="132" cy="70" rx="16" ry="9" transform="rotate(-25 132 70)"/>
+          <ellipse cx="138" cy="66" rx="7" ry="4" transform="rotate(-25 138 66)" class="core"/>
+          <ellipse cx="62" cy="128" rx="11" ry="6" transform="rotate(30 62 128)"/>
+        </g>
+        <g class="sweep">
+          <path d="M100 100 L100 8 A92 92 0 0 1 165 35 Z" fill="url(#sweepGrad)"/>
+          <line x1="100" y1="100" x2="100" y2="8" stroke="currentColor" stroke-width="1.5"/>
+        </g>
+        <circle cx="100" cy="100" r="3" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
 
-% take care of proper font encoding
-\ifxetexorluatex
-	\usepackage{fontspec}
-	\defaultfontfeatures{Ligatures=TeX}
-%	\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf} % local font
-\else
-	\usepackage[utf8]{inputenc}
-	\usepackage[T1]{fontenc}
-%	\usepackage[sfdefault]{noto} % use noto google font
-\fi
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <h2>關於我<small>About</small></h2>
+      <div>
+        <p>
+          我是一名氣象研究員，研究聚焦於都卜勒與雙偏極化氣象雷達的資料應用，
+          以及對流尺度數值模式的發展與驗證。我的工作連結「觀測」與「模式」兩端——
+          將雷達觀測轉化為模式可用的資訊，並透過資料同化與預報實驗，
+          改善颱風、梅雨鋒面與午後對流等劇烈天氣的短期定量降水預報。
+        </p>
+        <!-- TODO: 補上目前任職單位與職稱 -->
+        <dl class="facts">
+          <div><dt>目前職位</dt><dd class="todo">［職稱］，［任職單位］</dd></div>
+          <div><dt>研究領域</dt><dd>雷達氣象、數值天氣預報、資料同化、臨近預報</dd></div>
+          <div><dt>所在地</dt><dd>台灣</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-% enable mathematical syntax for some symbols like \varnothing
-\usepackage{amssymb}
+  <!-- ========== RESEARCH ========== -->
+  <section id="research" class="section alt">
+    <div class="container">
+      <h2>研究專長<small>Research</small></h2>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12 L19 6"/></svg>
+          </div>
+          <h3>氣象雷達</h3>
+          <p>都卜勒與雙偏極化雷達資料品質控制、降水估計（QPE）、風場反演與風暴結構分析。</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+          </div>
+          <h3>數值模式</h3>
+          <p>以 WRF 等區域模式進行對流尺度高解析度模擬、物理參數化敏感度測試與個案診斷分析。</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 17c3-6 5-6 8 0s5 6 8 0"/><path d="M4 9h6M14 9h6"/><circle cx="12" cy="9" r="2"/></svg>
+          </div>
+          <h3>資料同化</h3>
+          <p>雷達徑向風與回波資料同化（3DVAR / EnKF / LETKF），改善模式初始場與短期降水預報。</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
+          </div>
+          <h3>臨近預報</h3>
+          <p>風暴胞追蹤與外延預報、機率式臨近預報與預報校驗，支援短延時強降雨預警。</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-% bubble diagram configuration
-\usepackage{smartdiagram}
-\smartdiagramset{
-	% default font size is \large, so adjust to harmonize with sidebar layout
-	bubble center node font = \footnotesize,
-	bubble node font = \footnotesize,
-	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
-	bubble center node size = 0.4\sidebartextwidth,
-	bubble node size = 0.25\sidebartextwidth,
-	distance center/other bubbles = 1.5em,
-	% set center bubble color
-	bubble center node color = maincolor!70,
-	% define the list of colors usable in the diagram
-	set color list = {materiallime, materialamber,
-	materialcyan, materialblue, materialindigo},
-	% sets the opacity at which the bubbles are shown
-	bubble fill opacity = 0.8,
-}
+  <!-- ========== EXPERIENCE & EDUCATION ========== -->
+  <section id="experience" class="section">
+    <div class="container grid-2">
+      <h2>經歷與學歷<small>Experience</small></h2>
+      <div>
+        <h3 class="sub">工作經歷</h3>
+        <!-- TODO: 依實際經歷修改，可複製 <li> 增加項目 -->
+        <ol class="timeline">
+          <li>
+            <span class="when">20XX — 現在</span>
+            <div><strong>［職稱］</strong><span class="where">［單位名稱］</span>
+            <p>［主要工作內容，例如：雷達資料同化系統開發與作業化測試。］</p></div>
+          </li>
+          <li>
+            <span class="when">20XX — 20XX</span>
+            <div><strong>［職稱］</strong><span class="where">［單位名稱］</span>
+            <p>［主要工作內容］</p></div>
+          </li>
+        </ol>
 
-%-------------------------------------------------------------------------------
-%                            PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-%% mandatory information
-% your name
-\cvname{Chieh-Ying Ke}
-% job title/career
-\cvjobtitle{Data Scientist,\\[0.2em] Tiger of the Year}
+        <h3 class="sub">學歷</h3>
+        <ol class="timeline">
+          <li>
+            <span class="when">20XX — 20XX</span>
+            <div><strong>［博士／碩士］大氣科學</strong><span class="where">［學校名稱］</span>
+            <p>論文：［論文題目］</p></div>
+          </li>
+          <li>
+            <span class="when">20XX — 20XX</span>
+            <div><strong>學士 大氣科學</strong><span class="where">［學校名稱］</span></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-\write18{wget https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/64/Germany.png}
-\write18{wget https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/64/France.png}
-\write18{wget https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/64/Spain.png}
-\write18{wget https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/64/United-States.png}
-\write18{wget https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/64/Russia.png}
-\write18{wget https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/64/Switzerland.png}
-\write18{wget https://ipfs.io/ipfs/QmZiD898vX1yaukukNbgbuSoUtqVRD262k4qK4xWB523LM?filename=QmZiD898vX1yaukukNbgbuSoUtqVRD262k4qK4xWB523LM.png}
+  <!-- ========== PUBLICATIONS ========== -->
+  <section id="publications" class="section alt">
+    <div class="container grid-2">
+      <h2>著作發表<small>Publications</small></h2>
+      <div>
+        <!-- TODO: 依格式填入論文；本人姓名用 <b> 標示 -->
+        <ol class="pubs">
+          <li>
+            <span class="year">20XX</span>
+            <div>
+              <p class="title">［論文題目］</p>
+              <p class="authors"><b>Ke, C.-Y.</b>, ［共同作者］</p>
+              <p class="venue"><em>［期刊名稱］</em>, ［卷(期)］, ［頁碼］. <a href="#">DOI</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="year">20XX</span>
+            <div>
+              <p class="title">［研討會論文題目］</p>
+              <p class="authors"><b>Ke, C.-Y.</b>, ［共同作者］</p>
+              <p class="venue"><em>［研討會名稱］</em>, ［地點］.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="more"><a href="#">Google Scholar 完整列表 →</a></p>
+      </div>
+    </div>
+  </section>
 
+  <!-- ========== SKILLS ========== -->
+  <section class="section">
+    <div class="container grid-2">
+      <h2>技術工具<small>Skills</small></h2>
+      <div class="skills">
+        <div>
+          <h4>模式與同化</h4>
+          <p>WRF · WRFDA · LETKF / EnKF · 3DVAR</p>
+        </div>
+        <div>
+          <h4>雷達資料處理</h4>
+          <p>Py-ART · wradlib · 品質控制 · 雙偏極化參數分析</p>
+        </div>
+        <div>
+          <h4>程式與分析</h4>
+          <p>Python · Fortran · Shell · NCL · MATLAB</p>
+        </div>
+        <div>
+          <h4>計算環境</h4>
+          <p>Linux · HPC 叢集 · Git · netCDF / GRIB</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-%% optional information
-% profile picture
-\cvprofilepic{QmZiD898vX1yaukukNbgbuSoUtqVRD262k4qK4xWB523LM.png}
-% logo picture
-%\cvlogopic{pics/logo_txt.png}
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section alt">
+    <div class="container grid-2">
+      <h2>聯絡方式<small>Contact</small></h2>
+      <div>
+        <p>歡迎研究合作、學術交流或工作機會洽詢。</p>
+        <ul class="contact">
+          <li><span>Email</span><a href="mailto:you@example.com" class="todo">you@example.com</a></li>
+          <li><span>GitHub</span><a href="https://github.com/ru389ru389">github.com/ru389ru389</a></li>
+          <li><span>Scholar</span><a href="#" class="todo">Google Scholar</a></li>
+          <li><span>ORCID</span><a href="#" class="todo">0000-0000-0000-0000</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-% NOTE: ordering in sidebar will mimic the following order
-% date of birth
-\cvbirthday{\today}
-% short address/location, use \newline if more than 1 line is required
-\cvaddress{301 Park Ave, New-York, 10022 NY, USA}
-% phone number
-\cvphone{+1 212 355 3000}
-% skype ID
-\cvskype{myskypeID}
-% personal website
-\cvsite{https://laguer.github.io/sixtysecondscv/}
-% email address
-\cvmail{mail@dot.com}
-% pgp key
-\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
-% any other custom entry
-\cvcustomdata{\faFlag}{US Citizenship}
+</main>
 
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 1st PAGE
-%-------------------------------------------------------------------------------
-% add more profile sections to sidebar on first page
-\addtofrontsidebar{
-	% include gosquare national flags from https://github.com/gosquared/flags;
-	% naming according to ISO 3166-1 alpha-2 country codes
-	\graphicspath{{pics/flags/shiny/}}
+<footer class="footer">
+  <div class="container">© <span id="y">2026</span> Chieh-Ying Ke</div>
+</footer>
 
-	% social network accounts incl. proper hyperlinks
-	\profilesection{Social Network}
-		\begin{icontable}{2.5em}{1em}
-			\social{\aiOverleafSquare}
-				{https://www.overleaf.com/latex/templates/SixtySecondsCV/}
-				{Overleaf Link}
-			\social{\aiResearchGate}
-				{https://www.researchgate.net/profile/}
-				{Researchgate Link}
-			\social{\faGithub}
-				{https://github.com/LaGuer/SixtySecondsCV}
-				{Github Project Page Link}
-		\end{icontable}
-
-	\profilesection{Languages}
-		\pointskill{\flag{Germany.png}}{German}{3}
-    \pointskill{\flag{Spain.png}}{Spanish}{3}
-	  \pointskill{\flag{United-States.png}}{English}{5}
-	  \pointskill{\flag{France.png}}{French}{5}
-    %\pointskill{\flag{Russia.png}}{Russia}{5}
-    
-    \begin{figure}\centering
-		\smartdiagram[bubble diagram]{
-			\textcolor{white}{\textbf{Being a}} \\
-			\textcolor{white}{\textbf{Panda}}, % center bubble
-			\textcolor{black!90}{Eating},
-			\textcolor{black!90}{Sleeping},
-			\textcolor{black!90}{Rolling},
-			\textcolor{black!90}{Playing},
-			\textcolor{black!90}{Chilling}
-		}
-	\end{figure}
-	
-	\profilesection{Barskills}
-	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-	\barskill{\faImage}{Playing Chess}{30}
-	\barskill{\faMusic}{Playing the bamboo stick}{50}
-}
-    
-
-%-------------------------------------------------------------------------------
-%                              SIDEBAR 2nd PAGE
-%-------------------------------------------------------------------------------
-\addtobacksidebar{
-	\profilesection{About Me}
-	\aboutme{
-		The giant panda is a terrestrial animal and primarily spends its life
-		roaming and feeding in the bamboo forests of the Qinling Mountains and in
-		the hilly province of Sichuan.
-	}
-
-	\profilesection{Diagrams}
-	\begin{sidebarminipage}
-		\chartlabel{Bubble}
-		\chartlabel{Diagrams}
-		\chartlabel{with}
-		\chartlabel{proper}
-		\chartlabel{overflow}
-		\chartlabel{protection}
-		\chartlabel{for}
-		\chartlabel{labels}
-	\end{sidebarminipage}
-
-	\begin{figure}\centering
-		\smartdiagram[bubble diagram]{
-			\textcolor{white}{\textbf{Being a}} \\
-			\textcolor{white}{\textbf{Panda}}, % center bubble
-			\textcolor{black!90}{Eating},
-			\textcolor{black!90}{Sleeping},
-			\textcolor{black!90}{Rolling},
-			\textcolor{black!90}{Playing},
-			\textcolor{black!90}{Chilling}
-		}
-	\end{figure}
-
-	\chartlabel{Wheel Chart}
-
-	\wheelchart{3.7em}{2em}{%
-	20/3em/maincolor!50/Chill,
-	15/3em/maincolor!15/Play,
-	30/4em/maincolor!40/Sleep,
-	20/3em/maincolor!20/Eat
-	}
-	
-	\profilesection{Hard Skills}
-		\skill{\faBalanceScale}{Sleeping almost all day}
-		\skill{\faSitemap}{Eating a lot of bamboo sprouts}
-		\skill{\faGraduationCap}{Relaxing rest of the day}
-
-	\profilesection{Soft Skills}
-		\pointskill{\faHome}{Looking Cute}{4}[4]
-			\skill[1.8em]{\faCompress}{No need to specify further}
-		\pointskill{\faChild}{Chillin' hard}{3}[4]
-			\skill[1.8em]{\faCompress}{On a tree}
-			\skill[1.8em]{\faCompress}{In the grass}
-			
-	\profilesection{Barskills}
-	\barskill{\faSkyatlas}{Wearing asian rice hats}{60}
-	\barskill{\faImage}{Playing Chess}{30}
-	\barskill{\faMusic}{Playing the bamboo stick}{50}
-
-	\profilesection{Memberships}
-	\begin{memberships}
-		%\membership[4em]{pics/logo.png}{some.site}
-		%\membership[4em]{pics/logo.png}{Some longer text spanning over more than
-		%	only one line}
-	\end{memberships}
-}
-
-
-%-------------------------------------------------------------------------------
-%                         TABLE ENTRIES RIGHT COLUMN
-%-------------------------------------------------------------------------------
-\begin{document}
-
-\makefrontsidebar
-
-\cvsection{Working Experience}
-\begin{cvtable}[3]
-	\cvitem{currently}{CEO The Panda Way}{Start Up}{Chief executive officer, Head
-		developer and yoga ambassador of 'The Panda Way' - A company from pandas
-		for pandas.}
-	\cvitem{2018 -- 2019}{Data Scientist}{Amis University}{
-		Reasearching the impact of adequate AMIS nutrition compared to
-		conventional feeding methods.}
-	\cvitem{2017 -- 2018}{Asset Management Information Solution}{Decentralized Exchange}{Continuously improving
-		the workflow of crypto-asset distribution and exchange.}
-\end{cvtable}
-
-
-\cvsection{Education}
-\cvsubsection{Postgraduate Training}
-\begin{cvtable}[1.5]
-	\cvitem{2009 -- 2010}{Post-Doc Panda Studies}{Panda Academy}
-		{In-depth studies on the impact of bamboo nutrition for young pandas and
-		its relation to relaxing, sleeping and snoozing parts of the day.}
-	\cvitem{2008 -- 2009}{Research Stay Europe}{European Panda Labs}
-		{Spending one year abroad teaching about the
-		newest findings and research in the field of decentralized finance and
-		applications for BambooRelay as a trading platform.}
-\end{cvtable}
-
-
-\cvsubsection{Study}
-\begin{cvtable}[1.5]
-	\cvitem{2006 -- 2008}{Master Studies Panda Science}{Panda Academy}
-		{Focus: Advanced rice hat studies and nouveau rain-reflecting cover
-		materials.}
-	\cvitem{}{Master Theses ($\varnothing\, 1,0$)}{CRSW Institute}
-		{Impact of solar radiation onto rice hat cover materials with special
-		attention to water resistance.}
-	\cvitem{2003 -- 2006}{Bachelor Studies PandaScience}{Panda Academy}
-		{Focus: Bamboo stick morphology and its usage in different instruments.}
-	\cvitem{}{Bachelor Theses ($\varnothing\, 1,0$)}{BambooStick  Institute}
-		{The bamboo stick: An underestimated instrument in orchestras?}
-\end{cvtable}
-
-\cvsection{Publications}
-\begin{cvtable}
-	\cvpubitem{Back to Cosmos}{Sanchez et Al.}
-		{Progress in Physics}{2019}
-    \cvpubitem{Science unification and Permanent Cosmology}{Sanchez et Al.}
-        {Journal de Mathematiques pures et appliquees}{2020}
-\end{cvtable}
-
-\cvsection{Awards}
-\begin{cvtable}
-	\cvitem{2010 -- now}{Tiger of the Year}{OBS}{}
-	\cvitem{2001 -- now}{Voila Engine Search}{H3D}{}
-\end{cvtable}
-
-
-\cvsection{Extra-Curricular Activities}
-\begin{cvtable}
-	\cvitemshort{Sports}{Sailing, Golf}
-	\cvitemshort{Music}{Drums}
-	\cvitemshort{Education}{Machine Learning, CNN, AI}
-\end{cvtable}
-
-
-\newpage
-\makebacksidebar
-% \newgeometry{
-% 	top=\topbottommargin,
-% 	bottom=\topbottommargin,
-% 	right=\leftrightmargin,
-% 	left=\leftrightmargin
-% }
-
-\cvsection{section}
-\cvsubsection{Subsection}
-\begin{cvtable}
-	\cvitem{<dates>}{<cv-item title>}{<location>}{<optional: description>}
-\end{cvtable}
-
-\cvsection{cvitem}
-\cvsubsection{Multi-line with longer description}
-\begin{cvtable}
-	\cvitem{date}{Description}{location}{Some longer and more detailed
-		description, that takes two lines of space instead of only one.}
-	\cvitem{date}{Description}{location}{Some longer and more detailed
-		description, that takes two lines of space instead of only one.}
-	\cvitem{date}{Description}{location}{Some longer and more detailed
-		description, that takes two lines of space instead of only one.}
-\end{cvtable}
-
-\cvsubsection{One-line without description}
-\begin{cvtable}
-	\cvitem{Award}{One-line description}{Sponsor}{}
-	\cvitem{Award}{One-line description}{Sponsor}{}
-	\cvitem{Award}{One-line description}{Sponsor}{}
-\end{cvtable}
-
-\cvsection{cvitemshort}
-\cvsubsection{One-line}
-\begin{cvtable}
-	\cvitemshort{Key}{Some further description}
-	\cvitemshort{Key}{Some further description}
-	\cvitemshort{Key}{Some further description}
-\end{cvtable}
-
-\cvsubsection{Multi-line with longer description}
-\begin{cvtable}
-	\cvitemshort{Key}{Some further description. Can fill even more than
-		only one single line while still keeping the correct indendation level.}
-	\cvitemshort{Key}{Some further description. Can fill even more than
-		only one single line while still keeping the correct indendation level.}
-	\cvitemshort{Key}{Some further description. Can fill even more than
-		only one single line while still keeping the correct indendation level.}
-\end{cvtable}
-
-\cvsignature  \watermark.
-%\begin{Form}
-%  \digsigfield{5cm}{3cm}{\cvsignature}
-%\end{Form}
-\end{document}
-
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
